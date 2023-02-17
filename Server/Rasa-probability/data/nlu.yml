@@ -1,0 +1,824 @@
+version: '3.1'
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - 'yes'
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - 'no'
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: ask_question
+  examples: |
+    - what is [classes](question)?
+    - what are [classes](question)?
+    - what does [classes](question) mean?
+    - what is [elements](question)?
+    - what are [elements](question)?
+    - what does [elements](question) mean?
+    - what is [method](question)?
+    - what are [method](question)?
+    - what does [method](question) mean?
+    - what is [string](question)?
+    - what are [string](question)?
+    - what does [string](question) mean?
+    - what is [right](question)?
+    - what are [right](question)?
+    - what does [right](question) mean?
+    - what is [arraylist](question)?
+    - what are [arraylist](question)?
+    - what does [arraylist](question) mean?
+    - what is [integer](question)?
+    - what are [integer](question)?
+    - what does [integer](question) mean?
+    - what is [array](question)?
+    - what are [array](question)?
+    - what does [array](question) mean?
+    - what is [files](question)?
+    - what are [files](question)?
+    - what does [files](question) mean?
+    - what is [maps](question)?
+    - what are [maps](question)?
+    - what does [maps](question) mean?
+    - what is [random](question)?
+    - what are [random](question)?
+    - what does [random](question) mean?
+    - what is [collections](question)?
+    - what are [collections](question)?
+    - what does [collections](question) mean?
+    - what is [unique](question)?
+    - what are [unique](question)?
+    - what does [unique](question) mean?
+    - what is [methods](question)?
+    - what are [methods](question)?
+    - what does [methods](question) mean?
+    - what is [element](question)?
+    - what are [element](question)?
+    - what does [element](question) mean?
+    - what is [import](question)?
+    - what are [import](question)?
+    - what does [import](question) mean?
+    - what is [class](question)?
+    - what are [class](question)?
+    - what does [class](question) mean?
+    - what is [java](question)?
+    - what are [java](question)?
+    - what does [java](question) mean?
+    - what is [sd1](question)?
+    - what are [sd1](question)?
+    - what does [sd1](question) mean?
+    - what is [phone number](question)?
+    - what are [phone number](question)?
+    - what does [phone number](question) mean?
+    - what is [sets](question)?
+    - what are [sets](question)?
+    - what does [sets](question) mean?
+    - what is [list](question)?
+    - what are [list](question)?
+    - what does [list](question) mean?
+    - what is [arraylists](question)?
+    - what are [arraylists](question)?
+    - what does [arraylists](question) mean?
+    - what is [size](question)?
+    - what are [size](question)?
+    - what does [size](question) mean?
+    - what is [arrays](question)?
+    - what are [arrays](question)?
+    - what does [arrays](question) mean?
+    - what is [course](question)?
+    - what are [course](question)?
+    - what does [course](question) mean?
+    - what is [print](question)?
+    - what are [print](question)?
+    - what does [print](question) mean?
+    - what is [parameter](question)?
+    - what are [parameter](question)?
+    - what does [parameter](question) mean?
+    - what is [lists](question)?
+    - what are [lists](question)?
+    - what does [lists](question) mean?
+    - what is [package](question)?
+    - what are [package](question)?
+    - what does [package](question) mean?
+    - what is [packages](question)?
+    - what are [packages](question)?
+    - what does [packages](question) mean?
+    - what is [documentation](question)?
+    - what are [documentation](question)?
+    - what does [documentation](question) mean?
+    - what is [talk](question)?
+    - what are [talk](question)?
+    - what does [talk](question) mean?
+    - what is [diamond notation](question)?
+    - what are [diamond notation](question)?
+    - what does [diamond notation](question) mean?
+    - what is [eclipse](question)?
+    - what are [eclipse](question)?
+    - what does [eclipse](question) mean?
+    - what is [variable](question)?
+    - what are [variable](question)?
+    - what does [variable](question) mean?
+    - what is [collection](question)?
+    - what are [collection](question)?
+    - what does [collection](question) mean?
+    - what is [entries](question)?
+    - what are [entries](question)?
+    - what does [entries](question) mean?
+    - what is [loop](question)?
+    - what are [loop](question)?
+    - what does [loop](question) mean?
+    - what is [length](question)?
+    - what are [length](question)?
+    - what does [length](question) mean?
+    - what is [brackets](question)?
+    - what are [brackets](question)?
+    - what does [brackets](question) mean?
+    - what is [video](question)?
+    - what are [video](question)?
+    - what does [video](question) mean?
+    - what is [week](question)?
+    - what are [week](question)?
+    - what does [week](question) mean?
+    - what is [information](question)?
+    - what are [information](question)?
+    - what does [information](question) mean?
+    - what is [stored](question)?
+    - what are [stored](question)?
+    - what does [stored](question) mean?
+    - what is [lisa jones'](question)?
+    - what are [lisa jones'](question)?
+    - what does [lisa jones'](question) mean?
+    - what is [map](question)?
+    - what are [map](question)?
+    - what does [map](question) mean?
+    - what is [hashsets](question)?
+    - what are [hashsets](question)?
+    - what does [hashsets](question) mean?
+    - what is [practice](question)?
+    - what are [practice](question)?
+    - what does [practice](question) mean?
+    - what is [click](question)?
+    - what are [click](question)?
+    - what does [click](question) mean?
+    - what is [internally](question)?
+    - what are [internally](question)?
+    - what does [internally](question) mean?
+    - what is [user](question)?
+    - what are [user](question)?
+    - what does [user](question) mean?
+    - what is [field](question)?
+    - what are [field](question)?
+    - what does [field](question) mean?
+    - what is [assignment](question)?
+    - what are [assignment](question)?
+    - what does [assignment](question) mean?
+    - what is [code](question)?
+    - what are [code](question)?
+    - what does [code](question) mean?
+    - what is [interface](question)?
+    - what are [interface](question)?
+    - what does [interface](question) mean?
+    - what is [optimisation](question)?
+    - what are [optimisation](question)?
+    - what does [optimisation](question) mean?
+    - what is [storage](question)?
+    - what are [storage](question)?
+    - what does [storage](question) mean?
+    - what is [retrieval](question)?
+    - what are [retrieval](question)?
+    - what does [retrieval](question) mean?
+    - what is [word](question)?
+    - what are [word](question)?
+    - what does [word](question) mean?
+    - what is [implementation](question)?
+    - what are [implementation](question)?
+    - what does [implementation](question) mean?
+    - what is [unordered](question)?
+    - what are [unordered](question)?
+    - what does [unordered](question) mean?
+    - what is [initialised](question)?
+    - what are [initialised](question)?
+    - what does [initialised](question) mean?
+    - what is [keys](question)?
+    - what are [keys](question)?
+    - what does [keys](question) mean?
+    - what is [argument](question)?
+    - what are [argument](question)?
+    - what does [argument](question) mean?
+    - what is [hashmap](question)?
+    - what are [hashmap](question)?
+    - what does [hashmap](question) mean?
+    - what is [phone](question)?
+    - what are [phone](question)?
+    - what does [phone](question) mean?
+    - what is [values](question)?
+    - what are [values](question)?
+    - what does [values](question) mean?
+    - what is [hashmaps](question)?
+    - what are [hashmaps](question)?
+    - what does [hashmaps](question) mean?
+    - what is [bound](question)?
+    - what are [bound](question)?
+    - what does [bound](question) mean?
+    - what is [nextdouble](question)?
+    - what are [nextdouble](question)?
+    - what does [nextdouble](question) mean?
+    - what is [objects](question)?
+    - what are [objects](question)?
+    - what does [objects](question) mean?
+    - what is [languages](question)?
+    - what are [languages](question)?
+    - what does [languages](question) mean?
+    - what is [project](question)?
+    - what are [project](question)?
+    - what does [project](question) mean?
+    - what is [version](question)?
+    - what are [version](question)?
+    - what does [version](question) mean?
+    - what is [subdirectory](question)?
+    - what are [subdirectory](question)?
+    - what does [subdirectory](question) mean?
+    - what is [libraries](question)?
+    - what are [libraries](question)?
+    - what does [libraries](question) mean?
+    - what is [delegation](question)?
+    - what are [delegation](question)?
+    - what does [delegation](question) mean?
+    - what is [mutator method](question)?
+    - what are [mutator method](question)?
+    - what does [mutator method](question) mean?
+    - what is [alternative](question)?
+    - what are [alternative](question)?
+    - what does [alternative](question) mean?
+    - what is [initialise](question)?
+    - what are [initialise](question)?
+    - what does [initialise](question) mean?
+    - what is [pointy brackets](question)?
+    - what are [pointy brackets](question)?
+    - what does [pointy brackets](question) mean?
+    - what is [musicorganizer](question)?
+    - what are [musicorganizer](question)?
+    - what does [musicorganizer](question) mean?
+    - what is [empty](question)?
+    - what are [empty](question)?
+    - what does [empty](question) mean?
+    - what is [printing](question)?
+    - what are [printing](question)?
+    - what does [printing](question) mean?
+    - what is [property](question)?
+    - what are [property](question)?
+    - what does [property](question) mean?
+    - what is [your life](question)?
+    - what are [your life](question)?
+    - what does [your life](question) mean?
+    - what is [videos](question)?
+    - what are [videos](question)?
+    - what does [videos](question) mean?
+    - what is [day](question)?
+    - what are [day](question)?
+    - what does [day](question) mean?
+    - what is [wearing](question)?
+    - what are [wearing](question)?
+    - what does [wearing](question) mean?
+    - what is [content](question)?
+    - what are [content](question)?
+    - what does [content](question) mean?
+    - what is [ba2005@hw.ac.uk](question)?
+    - what are [ba2005@hw.ac.uk](question)?
+    - what does [ba2005@hw.ac.uk](question) mean?
+    - what is [ben agnew](question)?
+    - what are [ben agnew](question)?
+    - what does [ben agnew](question) mean?
+    - what is [captions](question)?
+    - what are [captions](question)?
+    - what does [captions](question) mean?
+    - what is [bye bye](question)?
+    - what are [bye bye](question)?
+    - what does [bye bye](question) mean?
+    - what is [fun object](question)?
+    - what are [fun object](question)?
+    - what does [fun object](question) mean?
+    - what is [jump](question)?
+    - what are [jump](question)?
+    - what does [jump](question) mean?
+    - what is [discussion board](question)?
+    - what are [discussion board](question)?
+    - what does [discussion board](question) mean?
+    - what is [sessions](question)?
+    - what are [sessions](question)?
+    - what does [sessions](question) mean?
+    - what is [live](question)?
+    - what are [live](question)?
+    - what does [live](question) mean?
+    - what is [questions](question)?
+    - what are [questions](question)?
+    - what does [questions](question) mean?
+    - what is [attention](question)?
+    - what are [attention](question)?
+    - what does [attention](question) mean?
+    - what is [approval](question)?
+    - what are [approval](question)?
+    - what does [approval](question) mean?
+    - what is [seal](question)?
+    - what are [seal](question)?
+    - what does [seal](question) mean?
+    - what is [happy](question)?
+    - what are [happy](question)?
+    - what does [happy](question) mean?
+    - what is [black magic](question)?
+    - what are [black magic](question)?
+    - what does [black magic](question) mean?
+    - what is [comment](question)?
+    - what are [comment](question)?
+    - what does [comment](question) mean?
+    - what is [people](question)?
+    - what are [people](question)?
+    - what does [people](question) mean?
+    - what is [document](question)?
+    - what are [document](question)?
+    - what does [document](question) mean?
+    - what is [working memory](question)?
+    - what are [working memory](question)?
+    - what does [working memory](question) mean?
+    - what is [ancestor](question)?
+    - what are [ancestor](question)?
+    - what does [ancestor](question) mean?
+    - what is ['size](question)?
+    - what are ['size](question)?
+    - what does ['size](question) mean?
+    - what is [use](question)?
+    - what are [use](question)?
+    - what does [use](question) mean?
+    - what is [tree](question)?
+    - what are [tree](question)?
+    - what does [tree](question) mean?
+    - what is [hash](question)?
+    - what are [hash](question)?
+    - what does [hash](question) mean?
+    - what is [hidden](question)?
+    - what are [hidden](question)?
+    - what does [hidden](question) mean?
+    - what is [library](question)?
+    - what are [library](question)?
+    - what does [library](question) mean?
+    - what is [programmer](question)?
+    - what are [programmer](question)?
+    - what does [programmer](question) mean?
+    - what is [class library](question)?
+    - what are [class library](question)?
+    - what does [class library](question) mean?
+    - what is [extensive](question)?
+    - what are [extensive](question)?
+    - what does [extensive](question) mean?
+    - what is [value pair](question)?
+    - what are [value pair](question)?
+    - what does [value pair](question) mean?
+    - what is [duplicates](question)?
+    - what are [duplicates](question)?
+    - what does [duplicates](question) mean?
+    - what is [organisational relatedness](question)?
+    - what are [organisational relatedness](question)?
+    - what does [organisational relatedness](question) mean?
+    - what is [actual function](question)?
+    - what are [actual function](question)?
+    - what does [actual function](question) mean?
+    - what is [similar](question)?
+    - what are [similar](question)?
+    - what does [similar](question) mean?
+    - what is [unrelated](question)?
+    - what are [unrelated](question)?
+    - what does [unrelated](question) mean?
+    - what is [treesets](question)?
+    - what are [treesets](question)?
+    - what does [treesets](question) mean?
+    - what is [linkedlists](question)?
+    - what are [linkedlists](question)?
+    - what does [linkedlists](question) mean?
+    - what is [implementations](question)?
+    - what are [implementations](question)?
+    - what does [implementations](question) mean?
+    - what is [group objects](question)?
+    - what are [group objects](question)?
+    - what does [group objects](question) mean?
+    - what is [compare](question)?
+    - what are [compare](question)?
+    - what does [compare](question) mean?
+    - what is [slack](question)?
+    - what are [slack](question)?
+    - what does [slack](question) mean?
+    - what is [notification](question)?
+    - what are [notification](question)?
+    - what does [notification](question) mean?
+    - what is [comparing](question)?
+    - what are [comparing](question)?
+    - what does [comparing](question) mean?
+    - what is [duplicated](question)?
+    - what are [duplicated](question)?
+    - what does [duplicated](question) mean?
+    - what is [desires](question)?
+    - what are [desires](question)?
+    - what does [desires](question) mean?
+    - what is [mathematics](question)?
+    - what are [mathematics](question)?
+    - what does [mathematics](question) mean?
+    - what is [counts](question)?
+    - what are [counts](question)?
+    - what does [counts](question) mean?
+    - what is [strings](question)?
+    - what are [strings](question)?
+    - what does [strings](question) mean?
+    - what is ['java.util' package](question)?
+    - what are ['java.util' package](question)?
+    - what does ['java.util' package](question) mean?
+    - what is [lisa jones](question)?
+    - what are [lisa jones](question)?
+    - what does [lisa jones](question) mean?
+    - what is [old entry](question)?
+    - what are [old entry](question)?
+    - what does [old entry](question) mean?
+    - what is [overwrite](question)?
+    - what are [overwrite](question)?
+    - what does [overwrite](question) mean?
+    - what is [returns](question)?
+    - what are [returns](question)?
+    - what does [returns](question) mean?
+    - what is [everything](question)?
+    - what are [everything](question)?
+    - what does [everything](question) mean?
+    - what is [value](question)?
+    - what are [value](question)?
+    - what does [value](question) mean?
+    - what is [dictionary](question)?
+    - what are [dictionary](question)?
+    - what does [dictionary](question) mean?
+    - what is [pluses](question)?
+    - what are [pluses](question)?
+    - what does [pluses](question) mean?
+    - what is [smith'](question)?
+    - what are [smith'](question)?
+    - what does [smith'](question) mean?
+    - what is [nguyen'](question)?
+    - what are [nguyen'](question)?
+    - what does [nguyen'](question) mean?
+    - what is [python](question)?
+    - what are [python](question)?
+    - what does [python](question) mean?
+    - what is [telephone](question)?
+    - what are [telephone](question)?
+    - what does [telephone](question) mean?
+    - what is [pairs](question)?
+    - what are [pairs](question)?
+    - what does [pairs](question) mean?
+    - what is [list.size](question)?
+    - what are [list.size](question)?
+    - what does [list.size](question) mean?
+    - what is [indexing](question)?
+    - what are [indexing](question)?
+    - what does [indexing](question) mean?
+    - what is [next slide](question)?
+    - what are [next slide](question)?
+    - what does [next slide](question) mean?
+    - what is [positive](question)?
+    - what are [positive](question)?
+    - what does [positive](question) mean?
+    - what is [randomly](question)?
+    - what are [randomly](question)?
+    - what does [randomly](question) mean?
+    - what is [false](question)?
+    - what are [false](question)?
+    - what does [false](question) mean?
+    - what is [mean](question)?
+    - what are [mean](question)?
+    - what does [mean](question) mean?
+    - what is [nextint](question)?
+    - what are [nextint](question)?
+    - what does [nextint](question) mean?
+    - what is [nextbytes](question)?
+    - what are [nextbytes](question)?
+    - what does [nextbytes](question) mean?
+    - what is [pre](question)?
+    - what are [pre](question)?
+    - what does [pre](question) mean?
+    - what is [coursework](question)?
+    - what are [coursework](question)?
+    - what does [coursework](question) mean?
+    - what is [inserted](question)?
+    - what are [inserted](question)?
+    - what does [inserted](question) mean?
+    - what is [source](question)?
+    - what are [source](question)?
+    - what does [source](question) mean?
+    - what is [importation](question)?
+    - what are [importation](question)?
+    - what does [importation](question) mean?
+    - what is [arbitrary](question)?
+    - what are [arbitrary](question)?
+    - what does [arbitrary](question) mean?
+    - what is [readable](question)?
+    - what are [readable](question)?
+    - what does [readable](question) mean?
+    - what is [single class](question)?
+    - what are [single class](question)?
+    - what does [single class](question) mean?
+    - what is [asterisk](question)?
+    - what are [asterisk](question)?
+    - what does [asterisk](question) mean?
+    - what is [no difference](question)?
+    - what are [no difference](question)?
+    - what does [no difference](question) mean?
+    - what is [left](question)?
+    - what are [left](question)?
+    - what does [left](question) mean?
+    - what is [section](question)?
+    - what are [section](question)?
+    - what does [section](question) mean?
+    - what is [resources'](question)?
+    - what are [resources'](question)?
+    - what does [resources'](question) mean?
+    - what is [vision](question)?
+    - what are [vision](question)?
+    - what does [vision](question) mean?
+    - what is [older version](question)?
+    - what are [older version](question)?
+    - what does [older version](question) mean?
+    - what is [path](question)?
+    - what are [path](question)?
+    - what does [path](question) mean?
+    - what is [import everything](question)?
+    - what are [import everything](question)?
+    - what does [import everything](question) mean?
+    - what is [import statement](question)?
+    - what are [import statement](question)?
+    - what does [import statement](question) mean?
+    - what is [organised](question)?
+    - what are [organised](question)?
+    - what does [organised](question) mean?
+    - what is [lot of time](question)?
+    - what are [lot of time](question)?
+    - what does [lot of time](question) mean?
+    - what is [reading](question)?
+    - what are [reading](question)?
+    - what does [reading](question) mean?
+    - what is [specifications](question)?
+    - what are [specifications](question)?
+    - what does [specifications](question) mean?
+    - what is [java elements](question)?
+    - what are [java elements](question)?
+    - what does [java elements](question) mean?
+    - what is [something](question)?
+    - what are [something](question)?
+    - what does [something](question) mean?
+    - what is [home computer](question)?
+    - what are [home computer](question)?
+    - what does [home computer](question) mean?
+    - what is [minimum](question)?
+    - what are [minimum](question)?
+    - what does [minimum](question) mean?
+    - what is [java 8](question)?
+    - what are [java 8](question)?
+    - what does [java 8](question) mean?
+    - what is [online documentation](question)?
+    - what are [online documentation](question)?
+    - what does [online documentation](question) mean?
+    - what is [organized](question)?
+    - what are [organized](question)?
+    - what does [organized](question) mean?
+    - what is [dragons](question)?
+    - what are [dragons](question)?
+    - what does [dragons](question) mean?
+    - what is [dungeons](question)?
+    - what are [dungeons](question)?
+    - what does [dungeons](question) mean?
+    - what is [dnd](question)?
+    - what are [dnd](question)?
+    - what does [dnd](question) mean?
+    - what is [swt](question)?
+    - what are [swt](question)?
+    - what does [swt](question) mean?
+    - what is [dot](question)?
+    - what are [dot](question)?
+    - what does [dot](question) mean?
+    - what is [package structure](question)?
+    - what are [package structure](question)?
+    - what does [package structure](question) mean?
+    - what is [importing](question)?
+    - what are [importing](question)?
+    - what does [importing](question) mean?
+    - what is [inter](question)?
+    - what are [inter](question)?
+    - what does [inter](question) mean?
+    - what is [library classes](question)?
+    - what are [library classes](question)?
+    - what does [library classes](question) mean?
+    - what is [program](question)?
+    - what are [program](question)?
+    - what does [program](question) mean?
+    - what is [creation](question)?
+    - what are [creation](question)?
+    - what does [creation](question) mean?
+    - what is [fraction](question)?
+    - what are [fraction](question)?
+    - what does [fraction](question) mean?
+    - what is [purposes](question)?
+    - what are [purposes](question)?
+    - what does [purposes](question) mean?
+    - what is [java libraries](question)?
+    - what are [java libraries](question)?
+    - what does [java libraries](question) mean?
+    - what is [examples](question)?
+    - what are [examples](question)?
+    - what does [examples](question) mean?
+    - what is [cohesion](question)?
+    - what are [cohesion](question)?
+    - what does [cohesion](question) mean?
+    - what is [coupling](question)?
+    - what are [coupling](question)?
+    - what does [coupling](question) mean?
+    - what is [speaking](question)?
+    - what are [speaking](question)?
+    - what does [speaking](question) mean?
+    - what is [return files](question)?
+    - what are [return files](question)?
+    - what does [return files](question) mean?
+    - what is [hides](question)?
+    - what are [hides](question)?
+    - what does [hides](question) mean?
+    - what is [accessor method](question)?
+    - what are [accessor method](question)?
+    - what does [accessor method](question) mean?
+    - what is [files.size](question)?
+    - what are [files.size](question)?
+    - what does [files.size](question) mean?
+    - what is [atring](question)?
+    - what are [atring](question)?
+    - what does [atring](question) mean?
+    - what is [files.add](question)?
+    - what are [files.add](question)?
+    - what does [files.add](question) mean?
+    - what is [space](question)?
+    - what are [space](question)?
+    - what does [space](question) mean?
+    - what is [object](question)?
+    - what are [object](question)?
+    - what does [object](question) mean?
+    - what is [declaration](question)?
+    - what are [declaration](question)?
+    - what does [declaration](question) mean?
+    - what is [reasons](question)?
+    - what are [reasons](question)?
+    - what does [reasons](question) mean?
+    - what is [entry](question)?
+    - what are [entry](question)?
+    - what does [entry](question) mean?
+    - what is [initialisation](question)?
+    - what are [initialisation](question)?
+    - what does [initialisation](question) mean?
+    - what is [error](question)?
+    - what are [error](question)?
+    - what does [error](question) mean?
+    - what is [type](question)?
+    - what are [type](question)?
+    - what does [type](question) mean?
+    - what is [java util arraylist class](question)?
+    - what are [java util arraylist class](question)?
+    - what does [java util arraylist class](question) mean?
+    - what is [type ' string](question)?
+    - what are [type ' string](question)?
+    - what does [type ' string](question) mean?
+    - what is [arraylist...'](question)?
+    - what are [arraylist...'](question)?
+    - what does [arraylist...'](question) mean?
+    - what is [calling](question)?
+    - what are [calling](question)?
+    - what does [calling](question) mean?
+    - what is [constructor](question)?
+    - what are [constructor](question)?
+    - what does [constructor](question) mean?
+    - what is [java class library](question)?
+    - what are [java class library](question)?
+    - what does [java class library](question) mean?
+    - what is [runtime](question)?
+    - what are [runtime](question)?
+    - what does [runtime](question) mean?
+    - what is [undefined](question)?
+    - what are [undefined](question)?
+    - what does [undefined](question) mean?
+    - what is [standard](question)?
+    - what are [standard](question)?
+    - what does [standard](question) mean?
+    - what is [index](question)?
+    - what are [index](question)?
+    - what does [index](question) mean?
+    - what is [no brackets](question)?
+    - what are [no brackets](question)?
+    - what does [no brackets](question) mean?
+    - what is [numbers.length'](question)?
+    - what are [numbers.length'](question)?
+    - what does [numbers.length'](question) mean?
+    - what is [semicolon](question)?
+    - what are [semicolon](question)?
+    - what does [semicolon](question) mean?
+    - what is [numbers](question)?
+    - what are [numbers](question)?
+    - what does [numbers](question) mean?
+    - what is [fixed size collections](question)?
+    - what are [fixed size collections](question)?
+    - what does [fixed size collections](question) mean?
+    - what is [dying](question)?
+    - what are [dying](question)?
+    - what does [dying](question) mean?
+    - what is [days](question)?
+    - what are [days](question)?
+    - what does [days](question) mean?
+    - what is [consecutive](question)?
+    - what are [consecutive](question)?
+    - what does [consecutive](question) mean?
+    - what is [cares](question)?
+    - what are [cares](question)?
+    - what does [cares](question) mean?
+    - what is [lockdown](question)?
+    - what are [lockdown](question)?
+    - what does [lockdown](question) mean?
+    - what is [yes](question)?
+    - what are [yes](question)?
+    - what does [yes](question) mean?
+    - what is [clothes](question)?
+    - what are [clothes](question)?
+    - what does [clothes](question) mean?
+    - what is [case](question)?
+    - what are [case](question)?
+    - what does [case](question) mean?
