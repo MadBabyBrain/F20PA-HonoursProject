@@ -10,7 +10,7 @@
     "server-build": "tsc -p ./server && node ./server/build/index.js",
     "all-start": "npm run server-build && npm run client-build",
     "build": "tsc -p ./server && ng build",
-    "start": "node ./server/build/index.js"
+    "start": "node ./server/build/index.js && node client-start"
   },
   "private": true,
   "dependencies": {
