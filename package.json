@@ -9,7 +9,8 @@
     "test": "ng test",
     "server-build": "tsc -p ./server && node ./server/build/index.js",
     "all-start": "npm run server-build && npm run client-build",
-    "start": "node all-start"
+    "build": "tsc -p ./server && ng build",
+    "start": "node ./server/build/index.js"
   },
   "private": true,
   "dependencies": {
