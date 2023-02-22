@@ -4,6 +4,7 @@ exports.routes = void 0;
 const path_1 = require("path");
 var routes = (app) => {
     app.get('/*', (req, res, next) => {
+        console.log(__dirname);
         res.sendFile("index.html", { root: (0, path_1.resolve)("./dist/honours-project") });
     });
 };
