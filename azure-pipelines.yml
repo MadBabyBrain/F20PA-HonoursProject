@@ -19,6 +19,7 @@ steps:
     npm install -g @angular/cli
     npm install
     npm run build
+    ng cache disable
   displayName: 'npm install and build'
 
 - task: AzureWebApp@1
