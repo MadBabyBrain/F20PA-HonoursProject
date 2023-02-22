@@ -5,7 +5,7 @@ var routes = (app: Express) => {
 
     app.get('/*', (req, res, next) => {
         console.log(__dirname);
-        res.sendFile(__dirname + "../../" + "index.html")
+        res.sendFile("index.html")
     })
 }
 
