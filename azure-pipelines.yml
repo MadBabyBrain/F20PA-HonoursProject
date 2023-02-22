@@ -20,10 +20,14 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Azure for Students(27ce9bc5-d871-406d-b61c-64e93b51d3a0)'
     appType: 'webApp'
     appName: 'F20PA-HP-Rasa-website'
+    deployToSlotOrASE: true
+    resourceGroupName: 'F20PA-HP-Rasa-website-rg'
+    slotName: 'production'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
