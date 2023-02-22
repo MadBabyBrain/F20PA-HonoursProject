@@ -28,3 +28,5 @@ steps:
     appType: 'webApp'
     WebAppName: 'F20PA-HP-Rasa-website'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
+- task: PublishBuildArtifacts@1
