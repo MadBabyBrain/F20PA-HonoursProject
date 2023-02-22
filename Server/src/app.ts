@@ -4,8 +4,7 @@ import { resolve } from "path";
 var routes = (app: Express) => {
 
     app.get('/*', (req, res, next) => {
-        console.log(__dirname);
-        res.sendFile("index.html")
+        res.sendFile("index.html", {root: resolve("C:/home/site/repository/dist/honours-project") })
     })
 }
 
