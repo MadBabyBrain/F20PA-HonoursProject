@@ -7,8 +7,8 @@ import { ChatLayoutComponent } from './chat-layout/chat-layout.component';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} }
-// const config: SocketIoConfig = { url: 'http://localhost:5005', options: {} }
+// const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} }
+const config: SocketIoConfig = { url: 'https://f20pa-hp-rasa-website.azurewebsites.net:3000', options: {} }
 
 @NgModule({
   declarations: [
