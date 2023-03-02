@@ -3,51 +3,51 @@
         "occurances": 14,
         "sentences": [
             {
-                "probability": 0.00002141929617195235,
+                "probability": 0.004565765946996914,
                 "text": "let's start off with the libraries actually, because java provides thousands and thousands of classes that are ready to use for all kinds of different purposes, and we will have a look at a fraction of the most used ones in this course"
             },
             {
-                "probability": 0.000002867149881283911,
+                "probability": 0.004548173394479901,
                 "text": "and inside these classes are tens of thousands of methods, like in total, not in every class obviously"
             },
             {
-                "probability": 0.00002141929617195235,
+                "probability": 0.004565765946996914,
                 "text": "and amongst these are many useful classes that make your life easier"
             },
             {
-                "probability": 0.00002141929617195235,
+                "probability": 0.004565765946996914,
                 "text": "and all of these are, are classes i just saw for the first time that one of them is called dnd , i don't think there is anything to do with dungeons and dragons, even though if that [were true, that] would be awesome"
             },
             {
-                "probability": 0.00002141929617195235,
+                "probability": 0.004565765946996914,
                 "text": "and there, you can see all the packages here and if you click on a package you get all the classes in that package and if you click on a class you can get the you can get the specifications here with this is actually the package as well, but if you click on the class you get all the methods of the class and so forth, and you get a good amount of documentation that describes each method of the class"
             },
             {
-                "probability": 0.00002141929617195235,
+                "probability": 0.004565765946996914,
                 "text": "so it's a lot of reading, but once you know all your classes, it actually saves a lot of time"
             },
             {
-                "probability": 0.00002141929617195235,
+                "probability": 0.004565765946996914,
                 "text": "as i said, all these classes are organised into packages, so you need to know which package to import, and you do that by using the import statement, and you have to import everything except classes in the 'java.lang' package, such as string "
             },
             {
-                "probability": 0.00002141929617195235,
+                "probability": 0.004565765946996914,
                 "text": "once you import them, you can then use those classes and methods like [the same way as] classes from your current project, right"
             },
             {
-                "probability": 0.00002141929617195235,
+                "probability": 0.004565765946996914,
                 "text": "and you can do this by either importing a single class like arraylist from 'java.util', or you can import whole packages, meaning you can use all the classes within just using the asterisk (*) here"
             },
             {
-                "probability": 0.000002867149881283911,
+                "probability": 0.004548173394479901,
                 "text": "there's several list classes, for example in several different packages, and it's hard to find out which one you mean if you don't import it like this, but you use this"
             },
             {
-                "probability": 0.9998229113308619,
+                "probability": 0.9498320710896103,
                 "text": "so we need to document our classes so that the interface can be read on its own, because the interface is all people get right, the interface being the 'add(...) method and the 'get(...)' method, and the 'put(...)' method and so forth"
             },
             {
-                "probability": 0,
+                "probability": 0.004545454545454546,
                 "text": "but so much for collections, and next week we will actually jump into classes and and all the fun object oriented stuff"
             }
         ]

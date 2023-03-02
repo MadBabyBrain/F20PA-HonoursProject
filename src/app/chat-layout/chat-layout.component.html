@@ -4,7 +4,7 @@
             <li>
                 <div style="display: flex; flex-direction: row;">
                     {{msg.reply}}
-                    <div>
+                    <div *ngIf='msg.topic != ""' >
                         <button (click)="goodReview(msg.topic, msg.reply)">Good</button>
                         <button (click)="badReview(msg.topic, msg.reply)">Bad</button>
                     </div>

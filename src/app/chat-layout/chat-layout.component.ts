@@ -9,27 +9,35 @@ import { SocketManagerService } from '../socket-manager/socket-manager.service';
 export class ChatLayoutComponent implements OnInit, AfterViewInit {
 
   messages: Array<{topic: string, reply: string}> = new Array<{topic: string, reply: string}>;
+  sending: boolean;
 
-  constructor(private socketMan: SocketManagerService) { }
+  constructor(private socketMan: SocketManagerService) {
+    this.sending = false;
+  }
 
   ngAfterViewInit(): void {
     // this.socketMan.subscribeToEvent(false, 'recieve-message', (reply: String) => {
     //   console.log(reply.split(':=:'));
     // })
     this.socketMan.subscribeToEvent(true, 'bot_uttered', (reply: { text: string }) => {
-      console.log(reply);
+      // console.log(reply);
       this.messages.push({topic: reply.text.split(':=:')[0], reply: reply.text.split(':=:')[1]});
+      this.sending = false;
     })
     let input_area = document.getElementById("input") as HTMLTextAreaElement;
     input_area.value = ""
+    this.sending = false;
   }
 
   ngOnInit(): void {
   }
 
   submit(): void {
+    if (this.sending) return;
     let input_area = document.getElementById("input") as HTMLTextAreaElement;
     let msg = input_area.value;
+
+    this.sending = true;
 
     this.messages.push({topic: "", reply: msg});
 
