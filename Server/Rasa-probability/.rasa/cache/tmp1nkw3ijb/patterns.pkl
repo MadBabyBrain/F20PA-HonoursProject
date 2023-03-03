@@ -1,0 +1,6 @@
+[
+  {
+    "name": "question",
+    "pattern": "(\\bpolymorphism\\b|\\bcollections\\b|\\bdata\\b)"
+  }
+]

@@ -1,0 +1,6 @@
+{
+    "name": "rasa",
+    "scripts": {
+        "start": "rasa run actions && rasa run --cors '*' -p 5001"
+    }
+}
