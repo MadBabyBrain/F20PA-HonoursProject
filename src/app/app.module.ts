@@ -18,7 +18,7 @@ export class webSocket extends Socket {
   constructor() {
     // super({url: 'http://localhost:3000', options: {}})
     // super({url: 'https://young-suits-sell-80-43-50-235.loca.lt:3000', options: {}})
-    super({url: 'https://f20pa-honours-project-1.herokuapp.com:' + process.env['PORT'], options: {}})
+    super({url: 'https://f20pa-honours-project-1.herokuapp.com', options: {}})
   }
 }
 
