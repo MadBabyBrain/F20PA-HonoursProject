@@ -4,15 +4,8 @@ import { Server, Socket } from "socket.io";
 import { resolve } from "path";
 // import cors from "cors";
 
-import localtunnel from 'localtunnel';
-
 import { routes } from './app'
 import { server } from './server'
-
-// (async () => {
-//     const tunnel = await localtunnel({ port: 3000 });
-
-//     console.log("tunnel on port 3000", tunnel.url)
 
     
 const app = express()
@@ -27,5 +20,4 @@ routes(app)
 server(io)
 
 const port_num = http.listen(process.env.PORT || 3000, () => { console.log(`listening on port ${process.env.PORT}` + " or " + 3000) })
-// })()
 // app.listen(4000)

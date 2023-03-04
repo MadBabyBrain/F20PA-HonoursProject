@@ -40,7 +40,7 @@ class ActionAskQuestion(Action):
         print(entities)
         message = ""
 
-        file = open('../_middle_files/_json/words.json').read()
+        file = open('../words.json').read()
         jFile = json.loads(file)
 
         for e in entities:
