@@ -1,1 +1,1 @@
-web: npm run start; npm run start-rasa;
+web: npm run start;

@@ -9,6 +9,10 @@ var routes = (app: Express) => {
     //     next();
     // });
 
+    app.get('/get-probabilities', (req, res, next) => {
+        res.sendFile("words.json", {root: resolve("Server/") })
+    })
+
     app.get('/', (req, res, next) => {
         res.sendFile("index.html", {root: resolve("dist/honours-project") })
     })

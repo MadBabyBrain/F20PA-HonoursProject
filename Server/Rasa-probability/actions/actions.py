@@ -14,7 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 
 import json
 import random
-
+import requests
 #
 #
 # class ActionHelloWorld(Action):
@@ -40,8 +40,12 @@ class ActionAskQuestion(Action):
         print(entities)
         message = ""
 
-        file = open('../words.json').read()
-        jFile = json.loads(file)
+        res = requests.get(
+            "https://f20pa-honours-project-1.herokuapp.com/get-probabilities")
+
+        # file = open('../words.json').read()
+        # jFile = json.loads(file)
+        jFile = json.loads(res.json())
 
         for e in entities:
             if e['entity'] == 'question':
