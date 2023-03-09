@@ -1,7 +1,0 @@
-{
-    "name": "rasa",
-    "scripts": {
-        "start:server": "rasa run actions &",
-        "start:actions": "rasa run --cors '*' -p 5001 &"
-    }
-}
