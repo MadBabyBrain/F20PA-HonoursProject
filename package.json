@@ -9,7 +9,7 @@
     "test": "ng test",
     "server-build": "tsc -p ./server && node ./server/build/index.js",
     "build": "tsc -p ./Server && ng build",
-    "start": "node ./Server/build/index.js &",
+    "start": "node ./Server/build/index.js",
     "start-rasa": "npm run --prefix Server/Rasa-probability start:server && npm run --prefix Server/Rasa-probability start:actions"
   },
   "private": true,
