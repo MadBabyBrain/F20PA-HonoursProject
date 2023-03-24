@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { SocketManagerService } from '../socket-manager/socket-manager.service';
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 @Component({
   selector: 'app-chat-layout',
@@ -43,11 +43,11 @@ export class ChatLayoutComponent implements OnInit, AfterViewInit {
     this.messages.push({topic: "", reply: msg});
 
     this.socketMan.emitEvent(false, 'create-message', msg);
-    // this.socketMan.emitEvent(true, 'user_uttered', msg);
-    const response = await fetch("https://80.43.54.59:5001/webhooks/rest/webhook", {method: 'POST', body: msg })
-    const data: any = await response.json()
+    this.socketMan.emitEvent(true, 'user_uttered', msg);
+    // const response = await fetch("https://80.43.54.59:5001/webhooks/rest/webhook", {method: 'POST', body: msg })
+    // const data: any = await response.json()
     
-    this.messages.push({topic: data.text.split(':=:')[0], reply: data.text.split(':=:')[1]});
+    // this.messages.push({topic: data.text.split(':=:')[0], reply: data.text.split(':=:')[1]});
     this.sending = false;
 
   }
