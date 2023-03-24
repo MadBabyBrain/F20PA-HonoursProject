@@ -27,7 +27,7 @@ export class chatSocket extends Socket {
   constructor() {
     // super({url: 'https://rasa-probability-bot.herokuapp.com', options: {}})
     // super({url: 'https://chatty-coins-stare-80-43-50-235.loca.lt:5001', options: {}})
-    super({url: 'https://80.43.54.59', options: {}})
+    super({url: 'https://80.43.54.59:5001', options: {}})
   }
 }
 
