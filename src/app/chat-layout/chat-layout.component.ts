@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { SocketManagerService } from '../socket-manager/socket-manager.service';
+import fetch from 'node-fetch';
 
 @Component({
   selector: 'app-chat-layout',
@@ -32,7 +33,7 @@ export class ChatLayoutComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
-  submit(): void {
+  async submit(): Promise<void> {
     if (this.sending) return;
     let input_area = document.getElementById("input") as HTMLTextAreaElement;
     let msg = input_area.value;
@@ -42,7 +43,13 @@ export class ChatLayoutComponent implements OnInit, AfterViewInit {
     this.messages.push({topic: "", reply: msg});
 
     this.socketMan.emitEvent(false, 'create-message', msg);
-    this.socketMan.emitEvent(true, 'user_uttered', msg);
+    // this.socketMan.emitEvent(true, 'user_uttered', msg);
+    const response = await fetch("https://80.43.54.59:5001/webhooks/rest/webhook", {method: 'POST', body: msg })
+    const data: any = await response.json()
+    
+    this.messages.push({topic: data.text.split(':=:')[0], reply: data.text.split(':=:')[1]});
+    this.sending = false;
+
   }
 
   goodReview(topic:string, str: string): void {

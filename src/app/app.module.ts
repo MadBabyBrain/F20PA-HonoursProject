@@ -25,9 +25,9 @@ export class webSocket extends Socket {
 @Injectable()
 export class chatSocket extends Socket {
   constructor() {
-    super({url: 'https://f20pa-honours-project-1.herokuapp.com:5001', options: {}})
+    // super({url: 'https://rasa-probability-bot.herokuapp.com', options: {}})
     // super({url: 'https://chatty-coins-stare-80-43-50-235.loca.lt:5001', options: {}})
-    // super({url: '', options: {}})
+    super({url: '', options: {}})
   }
 }
 
