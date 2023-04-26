@@ -8,6 +8,9 @@ var routes = (app) => {
     //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     //     next();
     // });
+    app.get('/get-probabilities', (req, res, next) => {
+        res.sendFile("words.json", { root: (0, path_1.resolve)("Server/") });
+    });
     app.get('/', (req, res, next) => {
         res.sendFile("index.html", { root: (0, path_1.resolve)("dist/honours-project") });
     });

@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { SocketManagerService } from '../socket-manager/socket-manager.service';
-// import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 
 @Component({
   selector: 'app-chat-layout',
@@ -24,10 +24,19 @@ export class ChatLayoutComponent implements OnInit, AfterViewInit {
       // console.log(reply);
       this.messages.push({topic: reply.text.split(':=:')[0], reply: reply.text.split(':=:')[1]});
       this.sending = false;
+      setTimeout(() => {
+        document.getElementById('msg-list')!.scrollTo(0, document.getElementById('msg-list')!.scrollHeight);
+      }, 10);
     })
     let input_area = document.getElementById("input") as HTMLTextAreaElement;
     input_area.value = ""
     this.sending = false;
+    document.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter')
+      {
+        this.submit();
+      }
+    });
   }
 
   ngOnInit(): void {
@@ -44,12 +53,22 @@ export class ChatLayoutComponent implements OnInit, AfterViewInit {
 
     this.socketMan.emitEvent(false, 'create-message', msg);
     this.socketMan.emitEvent(true, 'user_uttered', msg);
-    // const response = await fetch("https://80.43.54.59:5001/webhooks/rest/webhook", {method: 'POST', body: msg })
-    // const data: any = await response.json()
-    
-    // this.messages.push({topic: data.text.split(':=:')[0], reply: data.text.split(':=:')[1]});
-    this.sending = false;
 
+    setTimeout(() => {
+      document.getElementById('msg-list')!.scrollTo(0, document.getElementById('msg-list')!.scrollHeight);
+      input_area.value = '';
+    }, 10);
+    // const response = await fetch("http://80.43.54.59:5001/webhooks/rest/webhook", {method: 'POST', body: JSON.stringify({"sender": "user", "message": msg}), headers: {'Content-Type': 'application.json'} })
+    // const data: any = await response.json()
+
+    // console.log(data)
+    
+    // this.messages.push({topic: data[0].text.split(':=:')[0], reply: data[0].text.split(':=:')[1]});
+    // this.sending = false;
+
+    setTimeout(() => {
+      this.sending = false;
+    }, 5000);
   }
 
   goodReview(topic:string, str: string): void {

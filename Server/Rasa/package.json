@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "start:server": "rasa run --cors '*' -p 5001",
+        "start:actions": "rasa run actions -p 5056"
+    }
+}

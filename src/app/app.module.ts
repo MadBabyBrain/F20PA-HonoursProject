@@ -16,9 +16,10 @@ import { ChatLayoutComponent } from './chat-layout/chat-layout.component';
 @Injectable()
 export class webSocket extends Socket {
   constructor() {
-    // super({url: 'http://localhost:3000', options: {}})
-    // super({url: 'https://young-suits-sell-80-43-50-235.loca.lt:3000', options: {}})
-    super({url: 'https://f20pa-honours-project-1.herokuapp.com', options: {}})
+    super({url: 'http://localhost:3000', options: {}})
+    // super({url: 'https://f20pa-honours-project-1.herokuapp.com', options: {}})
+    // super({ url: 'https://server-1.dgcapper.com', options: {}})
+    // super({url: 'http://2.103.134.80:3000', options: {}})
   }
 }
 
@@ -26,8 +27,9 @@ export class webSocket extends Socket {
 export class chatSocket extends Socket {
   constructor() {
     // super({url: 'https://rasa-probability-bot.herokuapp.com', options: {}})
-    // super({url: 'https://chatty-coins-stare-80-43-50-235.loca.lt:5001', options: {}})
-    super({url: 'https://80.43.54.59:5001', options: {}})
+    // super({url: 'http://2.103.134.80:5001', options: {}})
+    // super({ url: 'https://server-1.dgcapper.com', options: {}})
+    super({url: 'http://localhost:5001', options: {}})
   }
 }
 

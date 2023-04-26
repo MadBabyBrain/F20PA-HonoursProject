@@ -75,6 +75,8 @@ class MessageSocket extends crud_template_1.crudtemplate {
             let d = JSON.parse(json);
             // increase probability of returning this reply and decrease the probability of returning others
             // increase by 1 / number of possibilities and decrease others by 1 / number of possibilities split between them
+            if (d[o.t] == undefined)
+                return;
             let sentences = d[o.t]["sentences"];
             let tooSmall = false;
             let minVal = 1;
@@ -108,6 +110,8 @@ class MessageSocket extends crud_template_1.crudtemplate {
             let d = JSON.parse(json);
             // increase probability of returning this reply and decrease the probability of returning others
             // increase by 1 / number of possibilities and decrease others by 1 / number of possibilities split between them
+            if (d[o.t] == undefined)
+                return;
             let sentences = d[o.t]["sentences"];
             // let tooBig = false;
             // let maxVal = 0;

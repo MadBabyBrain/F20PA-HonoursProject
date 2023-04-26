@@ -34,7 +34,7 @@ export class MessageSocket extends crudtemplate<{id: 'message'}> {
 
     create(socket: Socket) {
         socket.on(`create-${this.name}`, (data) => { // create item
-            console.log(`sending message with msg: ${data}`)
+            console.log(`${socket.id}: sending message with msg: ${data}`)
     })}
 
     read(socket: Socket) {
@@ -63,6 +63,7 @@ export class MessageSocket extends crudtemplate<{id: 'message'}> {
             
             // increase probability of returning this reply and decrease the probability of returning others
             // increase by 1 / number of possibilities and decrease others by 1 / number of possibilities split between them
+            if (d[o.t] == undefined) return;
             let sentences: Array<{probability: number, text: string }> = d[o.t]["sentences"]
             
             let tooSmall = false;
@@ -102,6 +103,7 @@ export class MessageSocket extends crudtemplate<{id: 'message'}> {
             
             // increase probability of returning this reply and decrease the probability of returning others
             // increase by 1 / number of possibilities and decrease others by 1 / number of possibilities split between them
+            if (d[o.t] == undefined) return;
             let sentences: Array<{probability: number, text: string }> = d[o.t]["sentences"]
 
             // let tooBig = false;
